@@ -5,10 +5,10 @@ meta:
     version: 18
 build:
   skip: false
+  additionalCommands: npm run build
   artifacts:
     '*': /
 run:
-  scriptName: index.js
-  command: npm run start:prod
+  command: npm run start
   persistenceMount: /data
-  containerPort: '80'
+  containerPort: '88'
