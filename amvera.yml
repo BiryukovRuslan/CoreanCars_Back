@@ -6,9 +6,9 @@ meta:
 build:
   skip: false
   artifacts:
-    "*": /
+    '*': /
 run:
   scriptName: index.js
-  command: npm run build
+  command: npm run start:prod
   persistenceMount: /data
-  containerPort: "80"
+  containerPort: '80'
