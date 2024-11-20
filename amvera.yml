@@ -1,10 +1,14 @@
 meta:
   environment: node
   toolchain:
-    name: browser
+    name: npm
     version: 18
 build:
+  skip: false
   artifacts:
-    build/*: /
-  additionalCommands: nest build
-run: {}
+    "*": /
+run:
+  scriptName: index.js
+  command: npm run build
+  persistenceMount: /data
+  containerPort: "80"
